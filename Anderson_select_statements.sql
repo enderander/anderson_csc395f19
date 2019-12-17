@@ -147,7 +147,7 @@ left join donors d on p.pledge_id=d.pledge_id
 left join donation_history dh on d.donor_id=dh.donor_id
 left join contact_details cd on cd.contact_id=d.contact_id
 where 
-p.`paid_infull?`='false'
+p.`paid_infull`='false'
 
 group by p.pledge_id;
 
